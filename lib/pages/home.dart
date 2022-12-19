@@ -39,6 +39,8 @@ class UserHome extends StatelessWidget {
         )),
       body: Column(
         children: [
+
+          //Stories...
           Container(
             height: 130,
             child: ListView.builder(
@@ -48,7 +50,18 @@ class UserHome extends StatelessWidget {
                return BubbleStories(text: people[index]);
               }),
           ),
-          UserPosts(),
+
+          //Posts...
+          Expanded(
+            child: ListView.builder(
+              itemCount: people.length,
+              itemBuilder: (context, index) {
+                return UserPosts(
+                  name: people[index],
+                );
+              }
+            ),
+          ),
         ],
       ),
     );

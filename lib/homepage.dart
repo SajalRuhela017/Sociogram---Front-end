@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sociogram/pages/home.dart';
 import 'package:sociogram/pages/reels.dart';
 import 'package:sociogram/pages/search.dart';
+import 'package:sociogram/pages/shop.dart';
 
 import 'account.dart';
 
@@ -22,9 +23,9 @@ class _HomePageState extends State<HomePage>{
   }
   final List<Widget> _children = [
     UserHome(),
-    UserReels(),
-    UserReels(),
     UserSearch(),
+    UserReels(),
+    UserShop(),
     UserAccount(),
   ];
 
