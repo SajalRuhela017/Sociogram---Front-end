@@ -27,7 +27,11 @@ class UserHome extends StatelessWidget {
             ),
             Row(
               children: [
-                Icon(Icons.add),
+                GestureDetector(
+                  onTap: () {
+
+                  },
+                  child: Icon(Icons.add)),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Icon(Icons.favorite),
